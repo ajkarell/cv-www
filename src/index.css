@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Neon;
+  src: url("/NeonTubes2.ttf") format("truetype");
+}
+
+.neon {
+  font-family: "Neon", Fallback, sans-serif;
+}
+
+a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.icon {
+  height: 1.5rem;
+}
+
+.text-glow {
+  text-shadow: 0 0 1rem #ffffff;
+}
+
+.border-glow {
+  box-shadow: 0 0 2.2rem #fff, inset 0 0 0.4rem #fff;
+}
+
+.flicker {
+  animation: flicker 3s linear 0.5s infinite;
+}
+
+.flicker-delayed {
+  animation: flicker 3s linear infinite;
+}
+
+@keyframes flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    text-shadow: inherit;
+    opacity: 0.99;
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    text-shadow: none;
+    opacity: 0.4;
+  }
+}
